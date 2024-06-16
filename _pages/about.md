@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 2nd-year Ph.D. Student in Finance | W.P. Carey School of Business | Arizona State University
 
 profile:
   align: right
@@ -17,8 +17,6 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-
-2nd-year Ph.D. Student in Finance | W.P. Carey School of Business | Arizona State University
 
 **Research Interests**: Macro-finance, Empirical Asset Pricing, Machine Learning
 
