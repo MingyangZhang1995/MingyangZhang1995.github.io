@@ -6,7 +6,7 @@ nav: true
 nav_order: 2
 ---
 
-# Working in Progress
+# Work in Progress
 
 **A Non-linear Conditional Market Model** \
 with [Tyler Beason](https://tbeason.com/) and [David Schreindorfer](https://www.davidschreindorfer.com/)
