@@ -457,7 +457,7 @@ $$
 
 $$
 \begin{aligned}
-dp_t&= -p_t\left\{\left[r^f_t + \theta_t'(\mu_t-r^f_t)\right] + tr\left[\sigma_t^{-1}(\mu_t - r_t^f) \theta_t'\sigma_t\right]\right\}dt - p_t (\sigma_t^{-1}(\mu_t - r_t^f))' dB_t\\
+dp_t&= -p_t\left\{\left[r^f_t + \theta_t'(\mu_t-r^f_t)\right] - tr\left[\sigma_t^{-1}(\mu_t - r_t^f) \theta_t'\sigma_t\right]\right\}dt - p_t (\sigma_t^{-1}(\mu_t - r_t^f))' dB_t\\
 & = -p_tr^f_tdt- p_t(\sigma_t^{-1}(\mu_t - r_t^f))'dB_t\\
 \end{aligned}
 $$
