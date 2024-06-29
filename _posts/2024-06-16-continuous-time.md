@@ -366,11 +366,11 @@ $$
 
 $$
 \begin{cases}
-dp_t =& -\{b_x(t,x^*_t,u^*_t)P_t + P_tb_x(t,x^*_t,u^*_t)\\
+dP_t =& -\{b_x(t,x^*_t,u^*_t)P_t + P_tb_x(t,x^*_t,u^*_t)\\
      &+\sum_{j=1}^m\sigma_x^j(t,x^*_t,u^*_t)'P_t\sigma_x^j(t,x^*_t,u^*_t) \\
      &+ \sum_{j=1}^m[\sigma_x^j(t,x^*_t,u^*_t)'Q^j_t + Q^j_t\sigma_x^j(t,x^*_t,u^*_t)]\\
      &+ H_{xx}(t,x^*_t,u^*_t,p_t, q_t)\}dt + \sum_{j=1}^mQ^j_tdB^j_t\\
-p_{t_f} =& -h_x(x^*_{t_f})\\
+P_{t_f} =& -h_{xx}(x^*_{t_f})\\
 \end{cases}
 $$
 
