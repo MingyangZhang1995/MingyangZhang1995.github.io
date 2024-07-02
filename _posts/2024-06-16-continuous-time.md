@@ -37,7 +37,7 @@ Let $$u^*:[t_0,t_f] \rightarrow U$$ be an optimal control and $$x^*:[t_0,t_f]\ri
 
 $$H(t,x_t, u_t, p_t) = f(t,x_t, u_t) + \langle p_t, b(t,x_t, u_t)\rangle$$
 
-$$dp_t = -H_x(t,x^*_t, u^*_t, p_t)dt \text{  and  } p_{t_f} = -K_x(x^*_{t_f})$$
+$$dp_t = -H_x(t,x^*_t, u^*_t, p_t)dt \text{  and  } p_{t_f} = -h_x(x^*_{t_f})$$
 
 $$H(t,x^*_t, u^*_t,p_t) = \max_{u\in U} H(t,x^*_t, u_t,p_t)$$
 
@@ -45,7 +45,7 @@ $$H(t,x^*_t, u^*_t,p_t) = \max_{u\in U} H(t,x^*_t, u_t,p_t)$$
 
 $$
 \begin{aligned}
-\max_{u\in U} & \int_{0}^{T} e^{-\rho t} u(c_t)dt\\ 
+\max_{c_t} & \int_{0}^{T} e^{-\rho t} u(c_t)dt\\ 
 s.t. \ & dW_t = -c_tdt + r^f_tW_tdt
 \end{aligned}
 $$
@@ -359,7 +359,7 @@ $$
 
 $$
 \begin{cases}
-dp_t = -H_x(t,x_t,u_t,p_t,q_t)dt + q_t dB_t\\
+dp_t = -H_x(t,x^*_t,u^*_t,p_t,q_t)dt + q_t dB_t\\
 p_{t_f} = -h_x(x^*_{t_f})\\
 \end{cases}
 $$
