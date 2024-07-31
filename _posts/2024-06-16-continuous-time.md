@@ -22,14 +22,18 @@ $$
 
 where 
 
-$$x\in \mathbb{R}^n$$, $$u \in U$$
+$$
+\begin{align*}
+&x \in \mathbb{R}^n, u \in U\\
 
-$$f:[t_0,t_f] \times \mathbb{R}^n \times U \rightarrow \mathbb{R}$$,
+&f:[t_0,t_f] \times \mathbb{R}^n \times U \rightarrow \mathbb{R}\\
 
-$$h:\mathbb{R}^n \rightarrow \mathbb{R}$$,
+&h:\mathbb{R}^n \rightarrow \mathbb{R}\\
 
-$$b:[t_0,t_f] \times \mathbb{R}^n \times U \rightarrow \mathbb{R}^n$$.
+&b:[t_0,t_f] \times \mathbb{R}^n \times U \rightarrow \mathbb{R}^n\\
 
+\end{align*}
+$$
 
 
 ## Maximum Principle
@@ -129,17 +133,17 @@ $$
 
 By the first row, we have the initial value equation of $$c(t)$$
 
-$$c(t) = e^{(\frac{r^f -\rho}{\gamma})t}c_0$$.
+$$c(t) = e^{(\frac{r^f -\rho}{\gamma})t}c_0$$
 
 By the second row, we have the initial value equation of $$W(t)$$
 
-$$(r^f - \frac{r^f -\rho}{\gamma})W(t) = \left(e^{(\frac{r^f -\rho}{\gamma})t}-e^{r^ft}\right)c_0 + e^{r^ft}\left[r^f - \frac{r^f -\rho}{\gamma}\right]W_0$$.
+$$(r^f - \frac{r^f -\rho}{\gamma})W(t) = \left(e^{(\frac{r^f -\rho}{\gamma})t}-e^{r^ft}\right)c_0 + e^{r^ft}\left[r^f - \frac{r^f -\rho}{\gamma}\right]W_0$$
 
 For general initial value differential equation, we are done. However, in our case, we do not have $$c_0$$. 
 
 For the finite-horizon Ramsey problem, we plug in $$W(T) = 0$$ to the second equation to calculate $$c_0$$, and then calculate the trajectory of $$c(t)$$ and $$W(t)$$.
 
-For the infinite-horizon Ramsey problem, we take $W(T) = 0$ and $$T \rightarrow \infty$$. 
+For the infinite-horizon Ramsey problem, we take $W(T) = 0$ and $T \rightarrow \infty$
 
 $$
 \begin{aligned}
@@ -148,9 +152,9 @@ $$
 \end{aligned}
 $$
 
-$$r^f-\rho<r^f$$ and $$\gamma>1$$ $$\Rightarrow$$ $$\frac{r^f -\rho}{\gamma}-r^f<0$$
+$r^f-\rho<r^f$ and $\gamma>1$ $\Rightarrow$ $\frac{r^f -\rho}{\gamma}-r^f<0$
 
-$$\Rightarrow c_0 =\left(r^f - \frac{r^f -\rho}{\gamma}\right)W_0 $$.
+$$\Rightarrow c_0 =\left(r^f - \frac{r^f -\rho}{\gamma}\right)W_0 $$
 
 Plug in the initial value of $$c_0$$ back to the dynamic of $$W(t)$$, we have a simpler form. We summarize the solution in the below equation system
 
@@ -380,8 +384,7 @@ $$
 \mathcal{H}(t,x^*_t,u^*_t) = \max_{u\in U}\mathcal{H}(t,x^*_t,u_t)
 $$
 
-**Special Case:** when the diffusion term does not contain the control variable, i.e. 
-$$\sigma(t,x_t,u_t) = \sigma(t,x_t)$$, the costates $$(P_t, Q_t)$$ drops. The maximum condition of $$\mathcal{H}$$ reduce to 
+**Special Case:** when the diffusion term does not contain the control variable, i.e. $\sigma(t,x_t,u_t) = \sigma(t,x_t)$, the costates $(P_t, Q_t)$ drops. The maximum condition of $$\mathcal{H}$$ reduce to 
 
 $$H(t,x^*_t, u^*_t,p_t,q_t) = \max_{u\in U} H(t,x^*_t, u_t,p_t,q_t)$$
 
