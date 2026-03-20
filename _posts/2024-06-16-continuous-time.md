@@ -252,11 +252,22 @@ $$
 Replace the corresponding parts in the Bellman's Principle of optimal by the above three equations. 
 $$
 \begin{aligned}
-&0=\sup _{u(\cdot) \in \mathcal{V}(s, T]} f(t, x(s), u(s)) (\hat{s}-s) + V_t(s,x(s))(\hat{s}-s) + \langle V_x(s,x(s)), b(t,x(s),u(s))(\hat{s}-s)\rangle + o(\hat{s}-s) \\
-&0=\sup _{u(\cdot) \in \mathcal{V}(s, T]}  f(t, x(s), u(s)) + V_t(s,x(s)) + \langle V_x(s,x(s)), b(t,x(s),u(s))\rangle + \frac{o(\hat{s}-s)}{(\hat{s}-s)}
+0 &= \sup_{u(\cdot)\in\mathcal{V}(s,T]}
+\Big[
+f(t,x(s),u(s))(\hat{s}-s)
++ V_t(s,x(s))(\hat{s}-s)
++ \langle V_x(s,x(s)), b(t,x(s),u(s))(\hat{s}-s)\rangle
++ o(\hat{s}-s)
+\Big] \\
+0 &= \sup_{u(\cdot)\in\mathcal{V}(s,T]}
+\Big[
+f(t,x(s),u(s))
++ V_t(s,x(s))
++ \langle V_x(s,x(s)), b(t,x(s),u(s))\rangle
++ \frac{o(\hat{s}-s)}{\hat{s}-s}
+\Big]
 \end{aligned}
 $$
-
 Take $$\hat{s}-s \rightarrow 0$$, we have the HJB equation
 
 $$
