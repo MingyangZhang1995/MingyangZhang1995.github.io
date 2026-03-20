@@ -37,9 +37,9 @@ Let $u^{\*}:[t_0,t_f] \rightarrow U$ be an optimal control and $$x^{\*}:[t_0,t_f
 
 $$H(t,x_t, u_t, p_t) = f(t,x_t, u_t) + \langle p_t, b(t,x_t, u_t)\rangle$$
 
-$$dp_t = -H_x(t,x^*_t, u^*_t, p_t)dt \text{  and  } p_{t_f} = -h_x(x^*_{t_f})$$
+$$dp_t = -H_x(t,x^{\*}_t, u^{\*}_t, p_t)dt \text{  and  } p_{t_f} = -h_x(x^{\*}_{t_f})$$
 
-$$H(t,x^*_t, u^*_t,p_t) = \max_{u\in U} H(t,x^*_t, u_t,p_t)$$
+$$H(t,x^{\*}_t, u^{\*}_t,p_t) = \max_{u\in U} H(t,x^{\*}_t, u_t,p_t)$$
 
 ## Example: Ramsey model (1)
 
