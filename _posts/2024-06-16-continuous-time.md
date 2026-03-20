@@ -409,7 +409,7 @@ Note the derivative of the trace is as follow
 
 $$
 \begin{aligned}
-d \{tr\left[(W_t\theta_t'\sigma_t)'P_t(W_t\theta_t'\sigma_t)\right] \Big}&= W_t^2P_t\Big{d\left[tr(\sigma_t'\theta_t\theta_t\sigma_t)\right]\}\\
+d \{tr\left[(W_t\theta_t'\sigma_t)'P_t(W_t\theta_t'\sigma_t)\right] \}&= W_t^2P_t\{d\left[tr(\sigma_t'\theta_t\theta_t\sigma_t)\right]\}\\
 &= W_t^2P_ttr[d(\sigma_t'\theta_t\theta_t\sigma_t)]\\
 &= 2W_t^2P_ttr[\theta_t'\sigma_t\sigma_t'd\theta_t]\\
 &= 2W_t^2P_t\theta_t'\sigma_t\sigma_t'd\theta_t \ \ (\text{since }\theta_t'\sigma_t\sigma_t'd\theta_t\text{ is a scalar})\\
