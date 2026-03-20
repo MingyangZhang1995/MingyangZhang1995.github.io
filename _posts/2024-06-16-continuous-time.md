@@ -67,10 +67,10 @@ $$
    $$\frac{dp_t}{p_t} = -r_t^fdt \text{, } p_t = e^{-\rho t} u'(c^{\*}_t)$$
 
    $$
-   \rho -\frac{u''(c^*_t)}{u'(c^*_t)}c^{*'}_t = r_t^f
+   \rho -\frac{u''(c^{\*}_t)}{u'(c^{\*}_t)}c^{\*'}_t = r_t^f
    $$
 
-For CRRA utility, the optimal trajectory $$W^*_t$$ is described by (suppose $$r_t^f = r^f$$)
+For CRRA utility, the optimal trajectory $$W^{\*}_t$$ is described by (suppose $$r_t^f = r^f$$)
 
 $$
 \begin{cases}
@@ -89,7 +89,7 @@ $$
 \begin{bmatrix}
    c\\
    W
-\end{bmatrix}=
+\end{bmatrix}'=
 \begin{bmatrix}
 (\frac{r^f -\rho}{\gamma}) & 0\\
 -1 & r^f
@@ -184,13 +184,13 @@ $$W''(t) = \frac{W_{i+1} - 2W_{i} + W_{i-1}}{\Delta t^2}$$
 For the finite-horizon Ramsey model, after rearranging the differential equation system of $$W(t)$$ and $$c(t)$$, we have the below differential equation of $$W(t)$$ 
 
 $$
-(\gamma r^f+r^f-\rho)W_t^{*'}-\gamma W_t^{*''}-(r^f-\rho)r^fW_t^*=0
+(\gamma r^f+r^f-\rho)W_t^{\*'}-\gamma W_t^{\*''}-(r^f-\rho)r^fW_t^{\*}=0
 $$
 
 The above differential equation can be rewrite as a equation of $$W$$, with $$W' = D_1 W$$ and $$W'' = D_2 W$$. 
 
 $$
-(\gamma r^f+r^f-\rho) D_1 W_t^{*}-\gamma D_2 W_t^{*}-(r^f-\rho)r^fW_t^*=b
+(\gamma r^f+r^f-\rho) D_1 W_t^{\*}-\gamma D_2 W_t^{\*}-(r^f-\rho)r^fW_t^{\*}=b
 $$
 
 $$
@@ -242,7 +242,7 @@ $$
 We derive the HJB equation from the Bellman's principle of optimality. 
 
 $$
-\left\{\begin{array}{l}
+\left{\begin{array}{l}
 x({\hat{s}}) =  x(s) + b(s,x(s),u(s))(\hat{s}-s) + o(\hat{s}-s) \\
 V(\hat{s},x(\hat{s})) =  V(s,x(s)) + V_t(s,x(s))(\hat{s}-s) + \langle V_x(s,x(s)), b(s,x(s),u(s))(\hat{s}-s)\rangle + o(\hat{s}-s) \\
 \int_s^{\hat{s}} f(t, x(t), u(t)) d t =  f(t, x(s), u(s)) (\hat{s}-s)+ o(\hat{s}-s)
