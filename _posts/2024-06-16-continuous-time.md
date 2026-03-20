@@ -365,13 +365,10 @@ p_{t_f} = -h_x(x^{\*}_{t_f})\\
 $$
 
 $$
-\begin{aligned}
-dP_t=&-\Big(b_x(t,x^{\*}_t,u^{\*}_t)'P_t + P_t b_x(t,x^{\*}_t, u^{\*}_t) \\
-& + \sum_{j=1}^m \sigma_x^j(t,x^{\*}_t,u^{\*}_t)'P_t\sigma_x^j(t,x^{\*}_t,u^{\*}_t) \\
-& + \sum_{j=1}^m [\sigma_x^j(t,x^{\*}_t,u^{\*}_t)'Q^j_t + Q^j_t\sigma_x^j(t,x^{\*}_t,u^{\*}_t)] \\
-& + H_{xx}(t,x^{\*}_t,u^{\*}_t,p_t, q_t)\Big)dt + \sum_{j=1}^mQ^j_tdB^j_t \\
+\begin{cases}
+dP_t=&-\Big(b_x(t,x^{\*}_t,u^{\*}_t)'P_t + P_t b_x(t,x^{\*}_t, u^{\*}_t)  + \sum_{j=1}^m \sigma_x^j(t,x^{\*}_t,u^{\*}_t)'P_t\sigma_x^j(t,x^{\*}_t,u^{\*}_t) + \sum_{j=1}^m [\sigma_x^j(t,x^{\*}_t,u^{\*}_t)'Q^j_t + Q^j_t\sigma_x^j(t,x^{\*}_t,u^{\*}_t)] + H_{xx}(t,x^{\*}_t,u^{\*}_t,p_t, q_t)\Big)dt + \sum_{j=1}^mQ^j_tdB^j_t \\
 P_{t_f} =& -h_{xx}(x^{\*}_{t_f})\\
-\end{aligned}
+\end{cases}
 $$
 
 such that
@@ -396,8 +393,9 @@ s.t. \ & dW_t = -c_tdt + r^f_tW_tdt + W_t\theta_t'(dr_t-r^f_tdt)\\
 \end{aligned}
 $$
 
-- **Step 1**: write down the Hamiltonian, the generalized Hamiltonian and the $$\mathcal{H}$$-function
-$$\displaystyle
+- **Step 1**: write down the Hamiltonian, the generalized Hamiltonian and the $\mathcal{H}$-function
+
+$$
 \begin{aligned}
 G &= e^{-\rho t} u(c_t) + p_t\left[-c_t + r^f_tW_t + W_t\theta_t'(\mu_t-r^f_t)\right] + \frac{1}{2}tr\left[(W_t\theta_t'\sigma_t)'P_t(W_t\theta_t'\sigma_t)\right]\\
 H &= e^{-\rho t} u(c_t) + p_t\left[-c_t + r^f_tW_t + W_t\theta_t'(\mu_t-r^f_t)\right] + tr[q_t'(W_t\theta_t'\sigma_t)]\\
@@ -411,12 +409,12 @@ Note the derivative of the trace is as follow
 
 $$
 \begin{aligned}
-d \{tr\left[(W_t\theta_t'\sigma_t)'P_t(W_t\theta_t'\sigma_t)\right] \}&= W_t^2P_t\{d\left[tr(\sigma_t'\theta_t\theta_t\sigma_t)\right]\}\\
+d \Big{tr\left[(W_t\theta_t'\sigma_t)'P_t(W_t\theta_t'\sigma_t)\right] \Big}&= W_t^2P_t\Big{d\left[tr(\sigma_t'\theta_t\theta_t\sigma_t)\right]\Big}\\
 &= W_t^2P_ttr[d(\sigma_t'\theta_t\theta_t\sigma_t)]\\
 &= 2W_t^2P_ttr[\theta_t'\sigma_t\sigma_t'd\theta_t]\\
 &= 2W_t^2P_t\theta_t'\sigma_t\sigma_t'd\theta_t \ \ (\text{since }\theta_t'\sigma_t\sigma_t'd\theta_t\text{ is a scalar})\\
-d \{tr\left[(W_t\theta_t'\sigma_t)'P_t(W^*_t\theta_t^{*'}\sigma_t)\right] \}&= W_tW^*_tP_t\theta_t^{*'}\sigma_t\sigma_t'd\theta_t\\
-d\{tr[(W_t\theta_t\sigma_t)'q_t]\} &=W_ttr[q_t\sigma_t'd\theta_t]\ \ (q\in \mathbb{R}^{1\times m})\\
+d \Big{tr\left[(W_t\theta_t'\sigma_t)'P_t(W^*_t\theta_t^{*'}\sigma_t)\right] \Big}&= W_tW^*_tP_t\theta_t^{*'}\sigma_t\sigma_t'd\theta_t\\
+d\Big{tr[(W_t\theta_t\sigma_t)'q_t]\Big} &=W_ttr[q_t\sigma_t'd\theta_t]\ \ (q\in \mathbb{R}^{1\times m})\\
 &=W_tq_t\sigma_t'd\theta_t
 \end{aligned}
 $$
