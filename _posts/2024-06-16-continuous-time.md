@@ -56,7 +56,7 @@ $$
 
 - **Step 2**: Take the first-order condition wrt the control $$c_t$$
    
-   $$H_c|_* = e^{-\rho t} u'(c^*_t) - p_t = 0 \Rightarrow p_t = e^{-\rho t} u'(c^*_t)$$
+   $$H_c|_{\*} = e^{-\rho t} u'(c^{\*}_t) - p_t = 0 \Rightarrow p_t = e^{-\rho t} u'(c^{\*}_t)$$
    
 - **Step 3**: Take the derivative wrt the state variable $$W_t$$
    
