@@ -64,7 +64,7 @@ $$
 
 - **Step 4**: Combine the equations in step 2 \& 3, we get the Euler equation, where the pricing kernel is $$p_t$$
    
-   $$\frac{dp_t}{p_t} = -r_t^fdt \text{, } p_t = e^{-\rho t} u'(c^*_t)$$
+   $$\frac{dp_t}{p_t} = -r_t^fdt \text{, } p_t = e^{-\rho t} u'(c^{\*}_t)$$
 
    $$
    \rho -\frac{u''(c^*_t)}{u'(c^*_t)}c^{*'}_t = r_t^f
@@ -86,19 +86,19 @@ We summarize the methods to solve the differential equations: analytical solutio
 Firstly, we rewrite the equation system in the matrix form $$X_t' = AX_t$$. The general solution is $$X_t = e^{At}X_0$$, where the exponential of a matrix is defined by the Taylor expansion (see definition in the [Wikipedia](https://en.wikipedia.org/wiki/Matrix_exponential)). 
 
 $$
-\left[\begin{matrix}
+\begin{bmatrix}
    c\\
    W
-\end{matrix}\right]'
+\end{bmatrix}'
 =
-\left[\begin{matrix}
+\begin{bmatrix}
 (\frac{r^f -\rho}{\gamma}) & 0\\
 -1 & r^f
-\end{matrix}\right]
-\left[\begin{matrix}
+\end{bmatrix}
+\begin{bmatrix}
    c\\
    W
-\end{matrix}\right]
+\end{bmatrix}
 $$
 
 In order to compute the analytical solution of $$e^{At}$$, we diagonalize the matrix $$A$$ using the eigenvalue decomposition. Then, the exponential of $$A$$ is $$e^{A} = Pe^{\Lambda}P^{-1}$$. In our case, the eigenvalues are $$(\frac{r^f -\rho}{\gamma})$$ and $$r^f$$, since the eigenvalues of a (lower/upper) diagonal matrix are the diagonal elements. Therefore, we have 
