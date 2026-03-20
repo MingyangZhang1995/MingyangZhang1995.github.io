@@ -242,11 +242,11 @@ $$
 We derive the HJB equation from the Bellman's principle of optimality. 
 
 $$
-\left{\begin{array}{l}
+\begin{array}{l}
 x({\hat{s}}) =  x(s) + b(s,x(s),u(s))(\hat{s}-s) + o(\hat{s}-s) \\
 V(\hat{s},x(\hat{s})) =  V(s,x(s)) + V_t(s,x(s))(\hat{s}-s) + \langle V_x(s,x(s)), b(s,x(s),u(s))(\hat{s}-s)\rangle + o(\hat{s}-s) \\
 \int_s^{\hat{s}} f(t, x(t), u(t)) d t =  f(t, x(s), u(s)) (\hat{s}-s)+ o(\hat{s}-s)
-\end{array}\right.
+\end{array}
 $$
 
 Replace the corresponding parts in the Bellman's Principle of optimal by the above three equations. 
