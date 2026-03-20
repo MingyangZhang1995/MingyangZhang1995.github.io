@@ -311,7 +311,7 @@ the PDE becomes
 
 $$
 \begin{cases}
-   v_t(t,W_t) + e^{-\rho t} u(\left[e^{\rho t}v_W(t,W_t)\right]^{-\frac{1}{\gamma}}) + v_W(t,W_t)(-\left[e^{\rho t}v_W(t,W_t)\right]^{-\frac{1}{\gamma}} + r^f_tW_t)\}=0\\
+   v_t(t,W_t) + e^{-\rho t} u(\left[e^{\rho t}v_W(t,W_t)\right]^{-\frac{1}{\gamma}}) + v_W(t,W_t)(-\left[e^{\rho t}v_W(t,W_t)\right]^{-\frac{1}{\gamma}} + r^f_tW_t)=0\\
    v(T, W_T) = 0
 \end{cases}
 $$
@@ -344,13 +344,13 @@ $$\sigma: [t_0,t_f] \times \mathbb{R}^n \times U \rightarrow \mathbb{R}^{n\times
 
 ## Stochastic Maximum Principle
 
-In stochastic optimal control, we have four costates $$(p_t, q_t)$$ and $$(P_t, Q_t)$$, where $$(P_t, Q_t)$$ can be considered as the second order costates. Meanwhile, we do not take the maximization of the Hamiltonian. Instead, we take the maximization of the $\mathcal{H}$-function. Besides, we introduce the *generalized Hamiltonian* $$G$$ for simplicity.
+In stochastic optimal control, we have four costates $(p_t, q_t)$ and $(P_t, Q_t)$, where $(P_t, Q_t)$ can be considered as the second order costates. Meanwhile, we do not take the maximization of the Hamiltonian. Instead, we take the maximization of the $\mathcal{H}$-function. Besides, we introduce the *generalized Hamiltonian* $G$ for simplicity.
 
-$$\displaystyle
+$$
 \begin{aligned}
 G(t,x_t,u_t,p_t,P_t) &= H(t,x_t,u_t,p_t) + \frac{1}{2}tr[\sigma(t,x_t,u_t)'P_t\sigma(t,x_t,u_t)]\\
 H(t,x_t,u_t,p_t,q_t) &= H(t,x_t,u_t,p_t) + tr[q_t'\sigma(t,x_t,u_t)]\\
-\mathcal{H}(t,x_t,u_t) &= G(t,x_t,u_t,p_t,P_t) + tr\{\sigma(t,x_t,u_t)'[q_t -P_t\sigma(t,x^*_t,u^*_t)]\}\\
+\mathcal{H}(t,x_t,u_t) &= G(t,x_t,u_t,p_t,P_t) + tr\{\sigma(t,x_t,u_t)'[q_t -P_t\sigma(t,x^{\*}_t,u^{\*}_t)]\}\\
 &(t,x,u,p,q,P) \in [t_0,t_f] \times \mathbb{R}^n \times U \times \mathbb{R}^n \times \mathbb{R}^{n \times m} \times \mathcal{S}^n
 \end{aligned}
 $$
@@ -359,30 +359,30 @@ $$
 
 $$
 \begin{cases}
-dp_t = -H_x(t,x^*_t,u^*_t,p_t,q_t)dt + q_t dB_t\\
-p_{t_f} = -h_x(x^*_{t_f})\\
+dp_t = -H_x(t,x^{\*}_t,u^{\*}_t,p_t,q_t)dt + q_t dB_t\\
+p_{t_f} = -h_x(x^{\*}_{t_f})\\
 \end{cases}
 $$
 
 $$
 \begin{cases}
-dP_t =& -\{b_x(t,x^*_t,u^*_t)'P_t + P_tb_x(t,x^*_t,u^*_t)\\
-     &+\sum_{j=1}^m\sigma_x^j(t,x^*_t,u^*_t)'P_t\sigma_x^j(t,x^*_t,u^*_t) \\
-     &+ \sum_{j=1}^m[\sigma_x^j(t,x^*_t,u^*_t)'Q^j_t + Q^j_t\sigma_x^j(t,x^*_t,u^*_t)]\\
-     &+ H_{xx}(t,x^*_t,u^*_t,p_t, q_t)\}dt + \sum_{j=1}^mQ^j_tdB^j_t\\
-P_{t_f} =& -h_{xx}(x^*_{t_f})\\
+dP_t =&-\{b_x(t,x^{\*}_t,u^{\*}_t)'P_t + P_tb_x(t,x^{\*}_t,u^{\*}_t)\\
+     &+\sum_{j=1}^m\sigma_x^j(t,x^{\*}_t,u^{\*}_t)'P_t\sigma_x^j(t,x^{\*}_t,u^{\*}_t) \\
+     &+ \sum_{j=1}^m[\sigma_x^j(t,x^{\*}_t,u^{\*}_t)'Q^j_t + Q^j_t\sigma_x^j(t,x^{\*}_t,u^{\*}_t)]\\
+     &+ H_{xx}(t,x^{\*}_t,u^{\*}_t,p_t, q_t)\}dt + \sum_{j=1}^mQ^j_tdB^j_t\\
+P_{t_f} =& -h_{xx}(x^{\*}_{t_f})\\
 \end{cases}
 $$
 
 such that
 
 $$
-\mathcal{H}(t,x^*_t,u^*_t) = \max_{u\in U}\mathcal{H}(t,x^*_t,u_t)
+\mathcal{H}(t,x^{\*}_t,u^{\*}_t) = \max_{u\in U}\mathcal{H}(t,x^{\*}_t,u_t)
 $$
 
 **Special Case:** when the diffusion term does not contain the control variable, i.e. $\sigma(t,x_t,u_t) = \sigma(t,x_t)$, the costates $(P_t, Q_t)$ drops. The maximum condition of $$\mathcal{H}$$ reduce to 
 
-$$H(t,x^*_t, u^*_t,p_t,q_t) = \max_{u\in U} H(t,x^*_t, u_t,p_t,q_t)$$
+$$H(t,x^{\*}_t, u^{\*}_t,p_t,q_t) = \max_{u\in U} H(t,x^{\*}_t, u_t,p_t,q_t)$$
 
 ## Example: Lucas Tree
 
@@ -425,10 +425,10 @@ Therefore, the FOC's are
 
 $$
 \begin{aligned}
-\mathcal{H}_c|_* &=  e^{-\rho t} u'(c^*_t) - p_t = 0\\
-\mathcal{H}_{\theta}|_* &= p_tW^*_t(\mu_t -r^f_t) +W_t^2P_t\sigma_t\sigma_t'\theta^*_t + W^*_t\sigma_tq_t' - W^{*2}_tP_t\sigma_t\sigma_t'\theta_t^*\\
-& = p_tW^*_t(\mu_t -r^f_t) + W^*_t\sigma_tq_t' =0 \\
-(\mathcal{H}_{\theta} &= p_tW_t(\mu_t -r^f_t) +W_t^2P_t\sigma_t\sigma_t'\theta_t + W_t\sigma_tq_t' - W_tW^*_tP_t\sigma_t\sigma_t'\theta_t^*)
+\mathcal{H}_c|_{\*} &=  e^{-\rho t} u'(c^{\*}_t) - p_t = 0\\
+\mathcal{H}_{\theta}|_{\*} &= p_tW^{\*}_t(\mu_t -r^f_t) +W_t^2P_t\sigma_t\sigma_t'\theta^{\*}_t + W^{\*}_t\sigma_tq_t' - W^{{\*}2}_tP_t\sigma_t\sigma_t'\theta_t^{\*}\\
+& = p_tW^{\*}_t(\mu_t -r^f_t) + W^{\*}_t\sigma_tq_t' =0 \\
+(\mathcal{H}_{\theta} &= p_tW_t(\mu_t -r^f_t) +W_t^2P_t\sigma_t\sigma_t'\theta_t + W_t\sigma_tq_t' - W_tW^{\*}_tP_t\sigma_t\sigma_t'\theta_t^{\*})
 \end{aligned}
 $$
 
@@ -438,7 +438,7 @@ Suppose $$s = m$$, i.e., the market is complete. We have
 
 $$
 \begin{aligned}
-p_t &= e^{-\rho t} u'(c^*_t)\\
+p_t &= e^{-\rho t} u'(c^{\*}_t)\\
 q_t' &=-p_t \sigma_t^{-1}(\mu_t - r_t^f) 
 \end{aligned}
 $$
