@@ -37,7 +37,7 @@ $$
 
 
 ## Maximum Principle
-Let $$u^*:[t_0,t_f] \rightarrow U$$ be an optimal control and $$x^*:[t_0,t_f]\rightarrow \mathbb{R}^n$$ be the corresponding optimal state trajectory. Then there exist a function (called *costate*) $$p:[t_0,t_f]\rightarrow \mathbb{R}^n$$ satisfying
+Let \(u^*:[t_0,t_f] \rightarrow U\) be an optimal control and $$x^*:[t_0,t_f]\rightarrow \mathbb{R}^n$$ be the corresponding optimal state trajectory. Then there exist a function (called *costate*) $$p:[t_0,t_f]\rightarrow \mathbb{R}^n$$ satisfying
 
 $$H(t,x_t, u_t, p_t) = f(t,x_t, u_t) + \langle p_t, b(t,x_t, u_t)\rangle$$
 
