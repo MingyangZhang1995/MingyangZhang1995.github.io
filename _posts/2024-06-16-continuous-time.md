@@ -242,11 +242,11 @@ $$
 We derive the HJB equation from the Bellman's principle of optimality. 
 
 $$
-\begin{array}{l}
+\begin{cases}
 x({\hat{s}}) =  x(s) + b(s,x(s),u(s))(\hat{s}-s) + o(\hat{s}-s) \\
 V(\hat{s},x(\hat{s})) =  V(s,x(s)) + V_t(s,x(s))(\hat{s}-s) + \langle V_x(s,x(s)), b(s,x(s),u(s))(\hat{s}-s)\rangle + o(\hat{s}-s) \\
 \int_s^{\hat{s}} f(t, x(t), u(t)) d t =  f(t, x(s), u(s)) (\hat{s}-s)+ o(\hat{s}-s)
-\end{array}
+\end{cases}
 $$
 
 Replace the corresponding parts in the Bellman's Principle of optimal by the above three equations.
@@ -267,10 +267,10 @@ $$
 **Hamilton-Jacobi-Bellman equation:** Suppose $$V \in C^1\left([0, T] \times \mathbb{R}^n\right)$$. Then $$V$$ is a solution to the following terminal value problem of a first-order partial differential equation:
 
 $$
-\left\{\begin{array}{l}
-v_t + \sup _{u \in U} H\left(t, x, u,v_x\right) = 0, \quad(t, x) \in[0, T) \times \mathbb{R}^n \\
+\begin{cases}
+v_t + \sup_{u \in U} H\left(t, x, u,v_x\right) = 0, \quad(t, x) \in[0, T) \times \mathbb{R}^n \\
 \left.v\right|_{t=T}=h(x_T), \quad x \in \mathbb{R}^n
-\end{array}\right.
+\end{cases}
 $$
 
 where
