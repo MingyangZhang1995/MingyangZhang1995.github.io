@@ -399,7 +399,7 @@ $$
 \begin{aligned}
 G &= e^{-\rho t} u(c_t) + p_t\left[-c_t + r^f_tW_t + W_t\theta_t'(\mu_t-r^f_t)\right] + \frac{1}{2}tr\left[(W_t\theta_t'\sigma_t)'P_t(W_t\theta_t'\sigma_t)\right]\\
 H &= e^{-\rho t} u(c_t) + p_t\left[-c_t + r^f_tW_t + W_t\theta_t'(\mu_t-r^f_t)\right] + tr[q_t'(W_t\theta_t'\sigma_t)]\\
-\mathcal{H} &= G + tr\{(W_t\theta_t'\sigma_t)'[q_t -P_t(W^*_t\theta_{t}^{*'}\sigma_t^*)]\}
+\mathcal{H} &= G + tr\{(W_t\theta_t'\sigma_t)'[q_t -P_t(W^{\*}_t\theta_{t}^{\*'}\sigma_t^{\*})]\}
 \end{aligned}
 $$
 
@@ -409,12 +409,12 @@ Note the derivative of the trace is as follow
 
 $$
 \begin{aligned}
-d \Big{tr\left[(W_t\theta_t'\sigma_t)'P_t(W_t\theta_t'\sigma_t)\right] \Big}&= W_t^2P_t\Big{d\left[tr(\sigma_t'\theta_t\theta_t\sigma_t)\right]\Big}\\
+d \{tr\left[(W_t\theta_t'\sigma_t)'P_t(W_t\theta_t'\sigma_t)\right] \Big}&= W_t^2P_t\Big{d\left[tr(\sigma_t'\theta_t\theta_t\sigma_t)\right]\}\\
 &= W_t^2P_ttr[d(\sigma_t'\theta_t\theta_t\sigma_t)]\\
 &= 2W_t^2P_ttr[\theta_t'\sigma_t\sigma_t'd\theta_t]\\
 &= 2W_t^2P_t\theta_t'\sigma_t\sigma_t'd\theta_t \ \ (\text{since }\theta_t'\sigma_t\sigma_t'd\theta_t\text{ is a scalar})\\
-d \Big{tr\left[(W_t\theta_t'\sigma_t)'P_t(W^*_t\theta_t^{*'}\sigma_t)\right] \Big}&= W_tW^*_tP_t\theta_t^{*'}\sigma_t\sigma_t'd\theta_t\\
-d\Big{tr[(W_t\theta_t\sigma_t)'q_t]\Big} &=W_ttr[q_t\sigma_t'd\theta_t]\ \ (q\in \mathbb{R}^{1\times m})\\
+d\{tr\left[(W_t\theta_t'\sigma_t)'P_t(W^{\*}_t\theta_t^{\*'}\sigma_t)\right] \}&= W_tW^{\*}_tP_t\theta_t^{\*'}\sigma_t\sigma_t'd\theta_t\\
+d\{tr[(W_t\theta_t\sigma_t)'q_t]\} &=W_ttr[q_t\sigma_t'd\theta_t]\ \ (q\in \mathbb{R}^{1\times m})\\
 &=W_tq_t\sigma_t'd\theta_t
 \end{aligned}
 $$
@@ -446,7 +446,7 @@ $$
 $$
 \begin{aligned}
 dp_t &= -H_xdt + q_tdB_t\\
-&= -\left\{p_t\left[r^f_t + \theta_t'(\mu_t-r^f_t)\right] + tr\left[q_t'\theta_t'\sigma_t\right]\right\}dt + q_tdB_t
+&= -\{p_t\left[r^f_t + \theta_t'(\mu_t-r^f_t)\right] + tr\left[q_t'\theta_t'\sigma_t\right]\}dt + q_tdB_t
 \end{aligned}
 $$
 
@@ -454,7 +454,7 @@ $$
 
 $$
 \begin{aligned}
-dp_t&= -p_t\left\{\left[r^f_t + \theta_t'(\mu_t-r^f_t)\right] - tr\left[\sigma_t^{-1}(\mu_t - r_t^f) \theta_t'\sigma_t\right]\right\}dt - p_t (\sigma_t^{-1}(\mu_t - r_t^f))' dB_t\\
+dp_t&= -p_t\{\left[r^f_t + \theta_t'(\mu_t-r^f_t)\right] - tr\left[\sigma_t^{-1}(\mu_t - r_t^f) \theta_t'\sigma_t\right]\}dt - p_t (\sigma_t^{-1}(\mu_t - r_t^f))' dB_t\\
 & = -p_tr^f_tdt- p_t(\sigma_t^{-1}(\mu_t - r_t^f))'dB_t\\
 \end{aligned}
 $$
@@ -515,10 +515,10 @@ $$
 **Hamilton-Jacobi-Bellman equation:** Suppose $$V \in C^{1,2}\left([0, T] \times \mathbb{R}^n\right)$$. Then $$V$$ is a solution to the following terminal value problem of a (possibly degenerate) second-order partial differential equation:
 
 $$
-\left\{\begin{array}{l}
-v_t + \sup _{u \in U} G\left(t, x, u,v_x,v_{xx}\right) = 0, \quad(t, x) \in[0, T) \times \mathbb{R}^n, \\
-\left.v\right|_{t=T}=h(x_T), \quad x \in \mathbb{R}^n,
-\end{array}\right.
+\begin{cases}
+v_t + \sup_{u \in U} G\left(t, x, u,v_x,v_{xx}\right) = 0, \quad(t, x) \in[0, T) \times \mathbb{R}^n \\
+v|_{t=T}=h(x_T), \quad x \in \mathbb{R}^n
+\end{cases}
 $$
 
 where
