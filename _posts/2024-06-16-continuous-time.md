@@ -89,8 +89,7 @@ $$
 \begin{bmatrix}
    c\\
    W
-\end{bmatrix}
-=
+\end{bmatrix}=
 \begin{bmatrix}
 (\frac{r^f -\rho}{\gamma}) & 0\\
 -1 & r^f
