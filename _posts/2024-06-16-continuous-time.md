@@ -25,13 +25,9 @@ where
 $$
 \begin{align*}
 &x \in \mathbb{R}^n, u \in U\\
-
 &f:[t_0,t_f] \times \mathbb{R}^n \times U \rightarrow \mathbb{R}\\
-
 &h:\mathbb{R}^n \rightarrow \mathbb{R}\\
-
 &b:[t_0,t_f] \times \mathbb{R}^n \times U \rightarrow \mathbb{R}^n\\
-
 \end{align*}
 $$
 
