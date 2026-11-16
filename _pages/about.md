@@ -2,7 +2,7 @@
 layout: about
 title: ABOUT
 permalink: /
-subtitle: 2nd-year Ph.D. Student in Finance | W.P. Carey School of Business | Arizona State University
+subtitle: 5th-year Ph.D. Student in Finance | Arizona State University
 
 # profile:
 #   align: right
@@ -12,11 +12,11 @@ subtitle: 2nd-year Ph.D. Student in Finance | W.P. Carey School of Business | Ar
 latest_posts: false
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 ---
 
-**Research Interests**: Macro-finance, Empirical Asset Pricing, Machine Learning
+**Research Interests**: International Finance, Macro-finance, Continuous-time Modeling
 
 **Contact**: <mzhan235@asu.edu>
 
-[CV](https://1drv.ms/b/s!AnIXo0FznANzged6FJFeOWy5oXjQRg?e=3SxYX5)
+<!-- [CV](https://1drv.ms/b/s!AnIXo0FznANzged6FJFeOWy5oXjQRg?e=3SxYX5) -->
