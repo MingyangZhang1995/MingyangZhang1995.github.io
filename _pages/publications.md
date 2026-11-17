@@ -55,7 +55,7 @@ nav_order: 2
     Solo Authored
     </span><br>
     <span class="notes">
-    [draft coming soon]()
+    [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7716659)
     </span>
 </span>
 
@@ -94,11 +94,3 @@ nav_order: 2
     [draft coming soon]()
     </span>
 </span>
-
-
-<!-- _pages/publications.md -->
-<!-- <div class="publications">
-
-{% bibliography %}
-
-</div> -->
