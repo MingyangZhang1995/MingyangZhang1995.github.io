@@ -23,7 +23,6 @@ nav_order: 2
 </style>
 <style>
     .title {
-        color: #000000;
         font-size: 1.15rem; 
         font-weight: bold;
         margin-right: 1rem;
