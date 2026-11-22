@@ -57,7 +57,7 @@ nav_order: 2
     [PDF]({{ '/assets/pdf/Risk_Shifting_in_the_Global_Financial_Network.pdf' | relative_url }})
     </span>
     <span class="notes">
-    [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7716659)
+    [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7716498)
     </span>
 </span>
 
